@@ -1,0 +1,17 @@
+.socialmedia {
+  &__links {
+    a {
+      font-size: 14px;
+
+      &:hover {
+        opacity: .6;
+      }
+
+      &:not(:last-child) {}
+    }
+  }
+
+  // :global(a.dark-mode) {
+  //   color: rgb(182, 13, 13);
+  // }
+}
