@@ -25,7 +25,7 @@
             LinkedIn
         </a>
         <a
-            href="https://www.instagram.com/ghofranbenhmaid/"
+            href="https://www.instagram.com/_ghofranebenhmaid/"
             class="sociallink"
             target="_blank"
             rel="noreferrer"

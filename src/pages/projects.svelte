@@ -37,8 +37,8 @@ onMount(async function () {
 
 import Tabs from "../components/Tabs.svelte"
 
-let tabItems = ["Logos", "Calygraphy", "Web"]
-let activeItem = "Logos"
+let tabItems = ["Web", "Calygraphy", "Logos"]
+let activeItem = "Web"
 
 const triggerTabChange = event => {
     activeItem = event.detail
@@ -50,7 +50,7 @@ const triggerTabChange = event => {
 <main class="container">
     <Tabs tabItems="{tabItems}" activeItem="{activeItem}" on:tabChange="{triggerTabChange}" />
     {#if activeItem === "Logos"}
-        <div class="projects">
+        <div class="projects" id="projects">
             {#each data as item}
                 {#if item.type === "logo"}
                     <div class="centent">
