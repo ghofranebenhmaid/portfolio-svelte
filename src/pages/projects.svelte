@@ -47,7 +47,7 @@ const triggerTabChange = event => {
 
 <!-- <NavBar /> -->
 
-<main class="container">
+<main class="container0">
     <Tabs tabItems="{tabItems}" activeItem="{activeItem}" on:tabChange="{triggerTabChange}" />
     {#if activeItem === "Logos"}
         <div class="projects" id="projects">
