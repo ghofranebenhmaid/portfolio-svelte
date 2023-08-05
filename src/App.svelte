@@ -1,19 +1,27 @@
-<script>
-	import { Router, Route } from "svelte-navigator";
-	import Home from "./pages/home.svelte";
-	import Projects from "./pages/projects.svelte";
+<style lang="scss" global>
+@import "./styles/globals.scss";
+</style>
 
-	
+<script>
+import Router from "svelte-spa-router"
+import Projects from "./routes/Projects.svelte"
+import Home from "./routes/Home.svelte"
+import NotFound from "./routes/NotFound.svelte"
+import NavBar from "./components/NavBar.svelte"
+import Footer from "./components/Footer.svelte"
+import Contact from "./routes/Contact.svelte"
+
+let routes = {
+    "/": Home,
+    "/projects": Projects,
+    "/contact": Contact,
+
+    "*": NotFound,
+}
 </script>
 
-<Router>
-	<!-- <Route path="/" component={Home} /> -->
-	<Route path="/" component={Home} />
-	<Route path="projects" component={Projects} />
-
-</Router>
-
-<style lang="scss" global>
-  @import "./styles/style.scss";
-  @import "./styles/globals.scss";
-</style>
+<main>
+    <NavBar />
+    <Router routes="{routes}" />
+    <Footer />
+</main>

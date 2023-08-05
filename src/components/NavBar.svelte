@@ -1,34 +1,57 @@
 <style lang="scss" global>
-@import "../styles/style.scss";
 @import "../styles/globals.scss";
 @import "../styles/NavBar.scss";
 
+:global(body) .menu span {
+    background-color: rgb(255, 255, 255);
+}
+
+:global(body.dark-mode) .menu span {
+    background-color: rgb(0, 0, 0);
+}
+:global(body) .blacklogo {
+    display: none;
+}
+:global(body.dark-mode) .blacklogo {
+    display: block;
+}
+:global(body) .whitelogo {
+    display: block;
+}
+:global(body.dark-mode) .whitelogo {
+    display: none;
+}
 .active {
     text-decoration: underline;
     color: aqua;
 }
+a {
+    overflow: hidden;
+}
 </style>
 
 <script>
-import {Link} from "svelte-navigator"
 import Button from "../components/Theme.svelte"
-
 import gsap from "gsap"
 
 import {onMount} from "svelte"
+import SplitText from "./SplitText.svelte"
 
 onMount(() => {
     const tl = gsap.timeline()
 
-    gsap.from(".nav", {
-        delay: 0.7,
+    tl.from([".nav ", ".slideUp"], {
+        delay: 2,
         y: -16,
         opacity: 0,
         duration: 1,
         ease: "power3.inOut",
     })
 })
-function scrollToTop() {
+let isMenuOpen = false
+
+function toggleMenu() {
+    isMenuOpen = !isMenuOpen
     window.scrollTo({
         top: 0,
         left: 1000,
@@ -37,33 +60,43 @@ function scrollToTop() {
 }
 </script>
 
-<nav class="nav container">
-    <div class="nav__logo">
-        <Link to="/" on:click="{scrollToTop}">
-            <span class="nav__logo--menu">GHOFRANE.</span>
-        </Link>
-    </div>
-    <div class="nav__list  ">
-        <ul class="nav__list--ul  ">
-            <!-- <Link to='/' on:click={scrollToTop} >
-         <li  >
-            <a >About</a>
-          
-          </li>
-        </Link> -->
+<div class="nav__bg">
+    <nav class="nav container">
+        <div class="nav__logo">
+            <a href="/#/">
+                <img src="/assets/SVG/logoarbw.svg" alt="logo white" class="whitelogo" />
+                <img src="/assets/SVG/logoarbb.svg" alt="logo black" class="blacklogo" />
+                <!-- <img src="/assets/SVG/whitelogo.svg" alt="logo white" class="whitelogo" />
+                <img src="/assets/SVG/blacklogo.svg" alt="logo black" class="blacklogo" /> -->
+                <!-- <span class="{`nav__logo--menu ${isMenuOpen ? 'isopen ' : ''} `}">Ghofrane.</span> -->
+            </a>
+        </div>
 
-            <!-- <Link to="/projects" on:click="{scrollToTop}">
-                <li>
-                    <a>Projects</a>
-                </li>
-            </Link> -->
+        <div class="nav__theme ">
+            <Button />
+        </div>
+        <div
+            class="{`menu hide-for-desktop hide-for-mobile ${isMenuOpen ? 'isopen ' : ''} `}"
+            on:click="{toggleMenu}"
+        >
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</div>
+
+<div class="{`list ${isMenuOpen ? 'isopen ' : ''} `}">
+    <div class=" container-900 ">
+        <ul class="list__ul m-top">
+            <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
+                <a class="alink" href="/#/" on:click="{toggleMenu}">Home</a>
+            </li>
+            <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
+                <a class="alink" href="/#/projects" on:click="{toggleMenu}"> Work </a>
+            </li>
+            <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
+                <a class="alink" href="/#/contact" on:click="{toggleMenu}"> Contact </a>
+            </li>
         </ul>
     </div>
-    <div class="nav__theme ">
-        <Button />
-    </div>
-    <div class="menu hide-for-desktop hide-for-mobile">
-        <span></span>
-        <span></span>
-    </div>
-</nav>
+</div>

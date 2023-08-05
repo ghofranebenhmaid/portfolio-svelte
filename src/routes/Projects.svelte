@@ -16,13 +16,23 @@
 :global(body) .logoImage:hover {
     filter: brightness(1) invert(0);
 }
+:global(body) svg {
+    stroke: rgb(255, 255, 255);
+    margin: 0;
+}
+:global(body.dark-mode) svg {
+    stroke: rgb(0, 0, 0);
+    margin: 0;
+}
+:global(body) li {
+    border: 1px solid rgb(0, 0, 0);
+}
+:global(body.dark-mode) li {
+    border: 1px solid rgb(0, 0, 0);
+}
 </style>
 
 <script>
-// import NavBar from "../components/NavBar.svelte"
-import SocialMediaAccounts from "../components/SocialMediaAccounts.svelte"
-// import Footer from "../components/Footer.svelte"
-
 import {onMount} from "svelte"
 
 const apiURL = "/assets/db.json"
@@ -32,10 +42,7 @@ let data = []
 onMount(async function () {
     const response = await fetch(apiURL)
     data = await response.json()
-    console.log(data)
 })
-
-import Tabs from "../components/Tabs.svelte"
 
 let tabItems = ["Web", "Calygraphy", "Logos"]
 let activeItem = "Web"
@@ -43,18 +50,27 @@ let activeItem = "Web"
 const triggerTabChange = event => {
     activeItem = event.detail
 }
+import Tabs from "../components/Tabs.svelte"
+
+import {GsapProjectsAnimation} from "../components/GsapProjectsAnimation.svelte"
+
+onMount(() => {
+    GsapProjectsAnimation()
+})
 </script>
 
-<!-- <NavBar /> -->
+<section class="hero__cases">
+    <h1 class="zoomin">Cases</h1>
+</section>
 
-<main class="container0">
+<main class="container">
     <Tabs tabItems="{tabItems}" activeItem="{activeItem}" on:tabChange="{triggerTabChange}" />
     {#if activeItem === "Logos"}
         <div class="projects" id="projects">
             {#each data as item}
                 {#if item.type === "logo"}
-                    <div class="centent">
-                        <div class="image">
+                    <div class="content ">
+                        <div class="image ">
                             <a href="{item.link}" target="_blank" rel="noreferrer">
                                 <img class="logoImage" src="{item.imageUrl}" alt="{item.title}" />
                             </a>
@@ -67,8 +83,8 @@ const triggerTabChange = event => {
         <div class="projects">
             {#each data as item}
                 {#if item.type === "calygraphy"}
-                    <div class="centent">
-                        <div class="image">
+                    <div class="content ">
+                        <div class="image ">
                             <a href="{item.link}" target="_blank" rel="noreferrer">
                                 <img
                                     class="calygraphyImage"
@@ -82,19 +98,21 @@ const triggerTabChange = event => {
             {/each}
         </div>
     {:else}
-        <div class="projects web__projects">
+        <div class="projects web__projects ">
             {#each data as item}
                 {#if item.type === "web"}
-                    <div class="centent  ">
-                        <div class="web__image">
+                    <div class="content ">
+                        <div class="web__image ">
                             <a href="{item.link}" target="_blank" rel="noreferrer">
-                                <img class="" src="{item.imageUrl}" alt="{item.title}" />
+                                <img src="{item.imageUrl}" alt="{item.title}" />
                             </a>
+                        </div>
+                        <div class="web__description  ">
+                            <div class="flex  flex-ai-c">
+                                <h3>{item.title}</h3>
 
-                            <span class="web__bg">
                                 <a href="{item.link}" target="blank" rel="noopener noreferrer">
                                     <button class="web__btn">
-                                        <p>View Case Study</p>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="34"
@@ -111,15 +129,13 @@ const triggerTabChange = event => {
                                         >
                                     </button>
                                 </a>
-                            </span>
-                            <div class="web__description">
-                                <h4>{item.title}</h4>
-                                <ul class="web__description--ul">
-                                    {#each item.technologies as items}
-                                        <li>{items}</li>
-                                    {/each}
-                                </ul>
                             </div>
+
+                            <ul class="web__description--ul">
+                                {#each item.technologies as items}
+                                    <li>{items}</li>
+                                {/each}
+                            </ul>
                         </div>
                     </div>
                 {/if}
@@ -127,5 +143,3 @@ const triggerTabChange = event => {
         </div>
     {/if}
 </main>
-
-<!-- <Footer /> -->

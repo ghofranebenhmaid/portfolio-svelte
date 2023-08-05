@@ -122,7 +122,7 @@
     {
         "title": "Treasure Hunt",
         "description": "Model: RB3539",
-        "link": "https://www.behance.net/ghofranebenhmaid",
+        "link": "https://www.feats.co/project/treasure-hunt-game",
         "github": "https://github.com/ghofranebenhmaid/fp-class12",
         "imageUrl": "/assets/web/16.jpg",
         "type": "web",
@@ -137,15 +137,7 @@
         "type": "web",
         "technologies": ["Html", "Scss", "Javascript"]
     },
-    {
-        "title": "Home Page Portfolio",
-        "description": "Model: RB3539",
-        "link": "https://home-page-portfolio-ghofranebenhmaid.vercel.app/",
-        "github": "https://github.com/ghofranebenhmaid/Home-page-portfolio",
-        "imageUrl": "/assets/web/14.jpg",
-        "type": "web",
-        "technologies": ["Html", "Css", "React", "Javascript"]
-    },
+
     {
         "title": "Chat App",
         "description": "Model: RB3539",
@@ -180,6 +172,15 @@
         "imageUrl": "/assets/web/18.jpg",
         "type": "web",
         "technologies": ["Html", "Css/Sass", "Javascript"]
+    },
+    {
+        "title": "Home Page Portfolio",
+        "description": "Model: RB3539",
+        "link": "https://home-page-portfolio-ghofranebenhmaid.vercel.app/",
+        "github": "https://github.com/ghofranebenhmaid/Home-page-portfolio",
+        "imageUrl": "/assets/web/14.jpg",
+        "type": "web",
+        "technologies": ["Html", "Css", "React", "Javascript"]
     },
     {
         "title": "Test Imonials",
