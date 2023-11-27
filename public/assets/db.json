@@ -4,49 +4,63 @@
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/Ibh.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "tn+ Tounsi",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/TnTounsi.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Nabo Snak",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/NaboSnak.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Almen Modstand",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/AlmenModstand.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Z Orchestra",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/ZOrchestra.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Yawnia",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/Yawmia.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "R",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/R.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
 
     {
@@ -54,14 +68,17 @@
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/DhaaBasmatak.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Diamond",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/Diamond.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": ""
     },
 
     {
@@ -69,55 +86,71 @@
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/Ichkuel.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": ""
+
     },
     {
         "title": "Treasure Hunt",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/logos/TreasureHunt.svg",
-        "type": "logo"
+        "type": "logo",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Imen",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/typography/Imen.svg",
-        "type": "calygraphy"
+        "type": "calygraphy",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Zaineb",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/typography/Zaineb.svg",
-        "type": "calygraphy"
+        "type": "calygraphy",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Montaha",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/typography/Montaha.svg",
-        "type": "calygraphy"
+        "type": "calygraphy",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Zahra",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/typography/Zahra.svg",
-        "type": "calygraphy"
+        "type": "calygraphy",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "AlFarid",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/typography/AlFarid.svg",
-        "type": "calygraphy"
+        "type": "calygraphy",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Imen 2",
         "description": "Model: RB3539",
         "link": "https://www.behance.net/ghofranebenhmaid",
         "imageUrl": "/assets/typography/Imen2.svg",
-        "type": "calygraphy"
+        "type": "calygraphy",
+        "github": "",
+        "technologies": []
     },
     {
         "title": "Treasure Hunt",
@@ -133,9 +166,9 @@
         "description": "Model: RB3539",
         "link": "https://sunnyside-agency-landing-page-puce.vercel.app/",
         "github": "https://github.com/ghofranebenhmaid/sunnyside-agency-landing-page",
+        "technologies": ["Html", "Scss", "Javascript"],
         "imageUrl": "/assets/web/13.jpg",
-        "type": "web",
-        "technologies": ["Html", "Scss", "Javascript"]
+        "type": "web"
     },
 
     {

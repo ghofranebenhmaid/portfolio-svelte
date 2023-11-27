@@ -2,26 +2,26 @@
 import {gsap} from "gsap"
 
 export function GsapHomeAnimation() {
-    // gsap.from([".banner-addition-bg", ".banner-bg", ".banner-bg2"], {
-    //     duration: 1.1,
-    //     width: 0,
-    //     // skewX: 1,
-    //     ease: "power3.inOut",
-    //     // once: true,
-    //     stagger: {
-    //         amount: 0.3,
-    //     },
-    // })
-    // gsap.to([".banner-addition-bg", ".banner-bg", ".banner-bg2"], {
-    //     duration: 1.1,
-    //     width: "100%",
-    //     // skewX: 1,
-    //     ease: "power3.inOut",
-    //     // once: true,
-    //     stagger: {
-    //         amount: 0.3,
-    //     },
-    // })
+    gsap.from([".banner-addition-bg", ".banner-bg", ".banner-bg2"], {
+        duration: 1.1,
+        width: 0,
+        // skewX: 1,
+        ease: "power3.inOut",
+        // once: true,
+        stagger: {
+            amount: 0.3,
+        },
+    })
+    gsap.to([".banner-addition-bg", ".banner-bg", ".banner-bg2"], {
+        duration: 1.1,
+        width: "100%",
+        // skewX: 1,
+        ease: "power3.inOut",
+        // once: true,
+        stagger: {
+            amount: 0.3,
+        },
+    })
 
     // gsap.from(".header__title", {
     //     delay: 0.7,

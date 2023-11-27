@@ -41,7 +41,7 @@ onMount(() => {
     const tl = gsap.timeline()
 
     tl.from([".nav ", ".slideUp"], {
-        delay: 2,
+        delay: 0.5,
         y: -16,
         opacity: 0,
         duration: 1,
@@ -58,17 +58,22 @@ function toggleMenu() {
         behavior: "smooth",
     })
 }
+function scrollTop() {
+    window.scrollTo({
+        top: 0,
+        left: 1000,
+        behavior: "smooth",
+    })
+}
 </script>
 
 <div class="nav__bg">
     <nav class="nav container">
         <div class="nav__logo">
-            <a href="/#/">
+            <a href="/#/" on:click="{scrollTop}">
                 <img src="/assets/SVG/logoarbw.svg" alt="logo white" class="whitelogo" />
                 <img src="/assets/SVG/logoarbb.svg" alt="logo black" class="blacklogo" />
-                <!-- <img src="/assets/SVG/whitelogo.svg" alt="logo white" class="whitelogo" />
-                <img src="/assets/SVG/blacklogo.svg" alt="logo black" class="blacklogo" /> -->
-                <!-- <span class="{`nav__logo--menu ${isMenuOpen ? 'isopen ' : ''} `}">Ghofrane.</span> -->
+
             </a>
         </div>
 
@@ -84,15 +89,14 @@ function toggleMenu() {
         </div>
     </nav>
 </div>
-
 <div class="{`list ${isMenuOpen ? 'isopen ' : ''} `}">
-    <div class=" container-900 ">
-        <ul class="list__ul m-top">
+    <div class=" ">
+        <ul class="list__ul">
             <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
                 <a class="alink" href="/#/" on:click="{toggleMenu}">Home</a>
             </li>
             <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
-                <a class="alink" href="/#/projects" on:click="{toggleMenu}"> Work </a>
+                <a class="alink" href="/#/projects" on:click="{toggleMenu}">My Work </a>
             </li>
             <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
                 <a class="alink" href="/#/contact" on:click="{toggleMenu}"> Contact </a>

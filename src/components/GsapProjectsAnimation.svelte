@@ -28,7 +28,7 @@ export function GsapProjectsAnimation() {
             // end: "100% 0%",
             // markers: true,
             scrub: true,
-            smooth: 2,
+            smooth: 1,
         },
     })
 }

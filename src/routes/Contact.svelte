@@ -56,6 +56,7 @@ let ImageProfile = "../assets/image/bg-profile.jpg"
 import gsap from "gsap"
 
 import {onMount} from "svelte"
+import NavBar from "../components/NavBar.svelte"
 
 onMount(() => {
     gsap.from(".contact-bg", {
@@ -77,6 +78,8 @@ onMount(() => {
     })
 })
 </script>
+
+<NavBar />
 
 <article class="container flexi  ">
     <figure>

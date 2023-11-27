@@ -50,7 +50,7 @@ export let activeItem
 
 function scrollToTop() {
     window.scrollTo({
-        top: 250,
+        top: 0,
         left: 1000,
         behavior: "smooth",
     })

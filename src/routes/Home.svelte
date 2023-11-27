@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--step-1);
+    font-size: var(--step-4);
     margin-bottom: var(--space-m);
     overflow: hidden;
 }
@@ -35,6 +35,13 @@ p {
     font-size: var(--step-0);
     line-height: var(--space-m);
     margin-bottom: var(--space-m);
+    text-wrap: balance;
+}
+.paragraph {
+    font-size: var(--step-3);
+    line-height: var(--space-l);
+    margin-bottom: var(--space-m);
+    // text-wrap: balance;
 }
 
 :global(body.dark-mode) .technologi p {
@@ -92,6 +99,8 @@ import {tweened} from "svelte/motion"
 import {cubicOut} from "svelte/easing"
 import Header from "../components/header/Header.svelte"
 import SplitText from "../components/SplitText.svelte"
+import Hero from "../components/header/Hero.svelte"
+import Footer from "../components/Footer.svelte"
 
 const carouselPhotos = [
     "/assets/web/a6.jpg",
@@ -128,8 +137,9 @@ onMount(() => {
 
 <!-- <svelte:window bind:scrollY="{y}" /> -->
 
-<div class="gradient"></div>
 <Header />
+<div class="gradient"></div>
+<!-- <Hero /> -->
 <!-- <div class="hero container" id="hero">
     <div class="hero__image ">
         <div id="bannerBgAddition" class="banner-addition-bg"></div>
@@ -139,24 +149,34 @@ onMount(() => {
     </div>
 </div> -->
 
-<article class="container-900 ">
+<article class="container m-top">
     <SplitText><h2 class="">About me</h2></SplitText>
-    <p class="wrap">
+
+    <p class="paragraph wrap">
+        I am excited about modern, open web standards. These days I mostly do React and NodeJS apps
+        with SCSS, Styled Components and CSS Module.
+    </p>
+    <p class="paragraph wrap">
+        As a developer I focus on quality and like giving attention to detail. Code should be
+        maintainable, scalable, performant and well tested. UX should feel right and look good.
+    </p>
+
+    <p class=" paragraph wrap">
         I’m a skilled and diligent frontend developer with a passion for React and a flair for user
         interface design. I have experience with different programming languages and technologies,
-        including HTML5, CSS3, Bootstrap, SASS, JavaScript, Git, React/Nextjs, Node.js, Express.js,
+        including HTML5, CSS3, SASS, JavaScript, Git, React/Nextjs, Node.js, Express.js,
         MySQL and Git (Version control) as well as WordPress. I’m also very skilled in using Adobe
         design programs, such as Photoshop, Illustrator, InDesign, Lightroom, Premiere Pro, After
         Effects and 3Ds max.
     </p>
 
-    <p class="wrap">
+    <p class="paragraph wrap">
         I’m educated in computer science and multimedia, and have completed a full-stack web
         development Bootcamp in Hack Your Future education program, and have achieved a lot of
         learning-by-doing through the years.
     </p>
 
-    <p class="wrap">
+    <p class="paragraph wrap">
         I have a broad skillset beside web-development including graphic design, user interface
         design, typography, photo and video editing. In my spare time I also enjoy photography and
         exploring the city and the nature.
@@ -245,8 +265,8 @@ onMount(() => {
     </div>
 </article>
 
-<article class=" container-900 m-top">
-    <p class="wrap">
+<article class=" container m-top">
+    <p class="paragraph wrap">
         I've been working at
         <a href=" https://kglakademi.dk/" target="_blank">
             <samp class="samp"> The Royal Danish Academy (KADK)</samp>
@@ -255,14 +275,15 @@ onMount(() => {
         called Facegarden, which is a browser game controlled with facial expressions. It is built for
         people who suffer from facial paralysis and would benefit from exercise of their facial muscles.
     </p>
-
-    <!-- <p class="wrap">
-        If you have a project that you'd like to work together on, please don't hesitate to get in
-        touch
-        <a href="mailto:me@ghofranebenhmaid.com" target="_blank">
-            <samp class="samp"> me@ghofranebenhmaid.com</samp>
+    <p class="paragraph wrap">
+        Now I am working at
+        <a href=" https://kglakademi.dk/" target="_blank">
+            <samp class="samp"> Green Car Lane</samp>
         </a>
-    </p> -->
+        as a Frontend developer using Reactjs, NodeJS, Git and Mongodb  on a project
+        called Facegarden, which is a browser game controlled with facial expressions. It is built for
+        people who suffer from facial paralysis and would benefit from exercise of their facial muscles.
+    </p>
 </article>
 
 <article class="card container m-top fadein">

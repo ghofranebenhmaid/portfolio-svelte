@@ -32,41 +32,57 @@ p {
 :global(body.dark-mode) .whitelogo {
     display: none;
 }
+/* :global(body) .svg-circle {
+    background-color: rgb(255, 255, 255);
+}
+:global(body.dark-mode) .svg-circle {
+    background-color: rgb(0, 0, 0);
+} */
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
     align-items: center;
+
+    /* width: 100%; */
+
     margin-trim: block;
 
-    height: 95vh;
-    height: 95svh;
-    position: relative;
+    height: 90vh;
+    height: 90svh;
+    /* position: relative; */
     text-wrap: balance;
 
-    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-        margin: var(--space-xl) 0;
+    @media (max-width: 599px) {
+        grid-template-columns: 1fr;
+    }
+    @media (min-width: 315px) and (max-width: 1400px) and (orientation: landscape) {
+        grid-template-columns: 1fr;
     }
 
     h1 {
-        font-size: var(--step-4);
-        font-weight: 900;
-        line-height: var(--step-5);
-        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-            font-size: var(--step-2);
-            line-height: var(--step-3);
-        }
+        /* font-size: var(--step-4); */
+        font-size: clamp(2rem, 1.2727rem + 3.6364vw, 4rem);
+
+        font-weight: 600;
+        font-family: "IBM Plex Sans", sans-serif;
+        text-wrap: balance;
     }
     p {
+        margin-top: var(--space-m);
         font-size: var(--step-0);
         line-height: var(--space-m);
+        text-wrap: balance;
     }
 }
 
 .svg-circle {
     position: relative;
     /* outline: 1px solid tan; */
-
+    @media (min-width: 315px) and (max-width: 1400px) and (orientation: landscape) {
+        display: none;
+    }
     .arrow {
         top: 50%;
         left: 50%;
@@ -77,44 +93,55 @@ p {
     }
     right: 0;
     bottom: 0;
-    width: 45vw;
-    height: 45hw;
-    max-width: 45vw;
-    max-height: 45hw;
     overflow: hidden;
 
     @media (max-width: 599px) {
         display: none;
     }
 }
+/* .head {
+
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    align-items: end;
+
+
+    h1 {
+
+        font-size: clamp(5rem, 3.7273rem + 6.3636vw, 8.5rem);
+    }
+} */
+.header-bg {
+    /* background-color: rgba(223, 199, 18, 0.919); */
+    overflow: hidden;
+}
 </style>
 
 <script>
 import ArrowSvg from "../ArrowSvg.svelte"
 import CircularTextSvg from "../CircularTextSvg.svelte"
+import NavBar from "../NavBar.svelte"
 import SplitText from "../SplitText.svelte"
 </script>
 
+<!-- <div class="head container">
+    <SplitText>
+        <h1 class="head__text ">Frontend Developer & UI/UX Designer</h1>
+    </SplitText>
+</div> -->
 <header class="header-bg ">
-    <div class="header container">
-        <div class="description wrap ">
-            <SplitText>
-                <p class=" wrap">Hi there 👋🏽, I'm</p>
-            </SplitText>
+    <NavBar />
 
-            <div class="flex  flex-ai-c-end">
-                <SplitText>
-                    <h1 class="header__subtitle ">Ghofrane Ben Hmaid</h1>
-                    <!-- <img src="/assets/SVG/logoarbw.svg" alt="logo white" class="whitelogo " />
-                        <img src="/assets/SVG/logoarbb.svg" alt="logo black" class="blacklogo " /> -->
-                </SplitText>
-            </div>
+    <div class="header container ">
+        <div class="description wrap ">
+            <div class="flex  flex-ai-c-end"></div>
             <SplitText>
                 <h1 class="header__subtitle ">Frontend Developer & UI/UX Designer</h1>
             </SplitText>
 
             <SplitText>
-                <p class=" ">
+                <p class="header__subtitle ">
                     I Build a fast, flexible, mobile first website that clearly communicates with
                     visitors.
                 </p>

@@ -9,11 +9,6 @@ svg:hover {
     fill: rgb(111, 76, 238);
     transform: scale(1.3);
 }
-circle {
-    stroke: rgb(111, 76, 238);
-    stroke-width: 3px;
-    fill: none;
-}
 </style>
 
 <svg

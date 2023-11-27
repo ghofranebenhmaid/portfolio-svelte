@@ -21,7 +21,6 @@ let routes = {
 </script>
 
 <main>
-    <NavBar />
     <Router routes="{routes}" />
     <Footer />
 </main>

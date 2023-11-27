@@ -42,7 +42,7 @@
     --step-1: clamp(1.2rem, calc(0.97rem + 1.17vw), 1.88rem);
     --step-2: clamp(1.44rem, calc(1.13rem + 1.57vw), 2.34rem);
     --step-3: clamp(1.73rem, calc(1.31rem + 2.09vw), 2.93rem);
-    --step-4: clamp(2.07rem, calc(1.52rem + 2.76vw), 3.66rem);
+    --step-4: clamp(1.9rem, calc(1.52rem + 2.76vw), 3.66rem);
     --step-5: clamp(2.49rem, calc(1.76rem + 3.63vw), 4.58rem);
 
     --space-3xs: clamp(0.25rem, calc(0.21rem + 0.22vw), 0.38rem);
@@ -50,7 +50,7 @@
     --space-xs: clamp(0.75rem, calc(0.62rem + 0.65vw), 1.13rem);
     --space-s: clamp(1rem, calc(0.83rem + 0.87vw), 1.5rem);
     --space-m: clamp(1.5rem, calc(1.24rem + 1.3vw), 2.25rem);
-    --space-l: clamp(2rem, calc(1.65rem + 1.74vw), 3rem);
+    --space-l: clamp(2rem, calc(1.65rem + 1.74vw), 4rem);
     --space-xl: clamp(3rem, calc(2.48rem + 2.61vw), 4.5rem);
     --space-2xl: clamp(4rem, calc(3.3rem + 3.48vw), 6rem);
     --space-3xl: clamp(6rem, calc(4.96rem + 5.22vw), 9rem);
@@ -126,12 +126,12 @@ a:hover {
 
 .container {
     max-width: 1300px;
-    padding: 0 25px;
+    padding: 0 20px;
     margin: auto;
 }
 .container-900 {
     max-width: 900px;
-    padding: 0 25px;
+    padding: 0 20px;
     margin: auto;
 }
 .m-top {
@@ -243,28 +243,27 @@ img {
     }
 }
 
-.gradient {
-    height: fit-content;
-    z-index: -1;
-    width: 100%;
-    max-width: 1040px;
-    background-image: 
-    //  radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
-        // radial-gradient(at 97% 21%, rgb(114, 133, 254) 0px, transparent 50%),
-        // radial-gradient(at 52% 99%, rgb(138, 107, 216) 0px, transparent 50%),
-        radial-gradient(at 3% 49%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-        // radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-        radial-gradient(at 73% 30%, rgb(92, 62, 197) 0px, transparent 50%);
-    // radial-gradient(at 79% 33%, rgb(244, 161, 94) 0px, transparent 50%);
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    filter: blur(100px) saturate(150%);
-    top: 80px;
-    opacity: 0.25;
+// .gradient {
+//     height: fit-content;
+//     z-index: -1;
+//     width: 100%;
+//     max-width: 1040px;
+//     background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
+//         radial-gradient(at 97% 1%, rgb(114, 133, 254) 0px, transparent 50%),
+//         radial-gradient(at 2% 19%, rgb(138, 107, 216) 0px, transparent 50%),
+//         radial-gradient(at 53% 99%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+//         // radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+//         radial-gradient(at 93% 90%, rgb(92, 62, 197) 0px, transparent 50%);
+//     // radial-gradient(at 79% 33%, rgb(244, 161, 94) 0px, transparent 50%);
+//     position: absolute;
+//     content: "";
+//     width: 100%;
+//     height: 100%;
+//     filter: blur(100px) saturate(150%);
+//     top: 80px;
+//     opacity: 0.65;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }

@@ -8,6 +8,12 @@
 :global(body.dark-mode) h3 {
     color: rgb(0, 0, 0);
 }
+:global(body) .paragraf {
+    border: 2px solid rgb(255, 255, 255);
+}
+:global(body.dark-mode) .paragraf {
+    border: 2px solid rgb(0, 0, 0);
+}
 
 :global(body) svg {
     fill: rgb(255, 255, 255);
@@ -22,6 +28,13 @@
 p {
     font-size: var(--step-0);
     line-height: var(--space-m);
+    position: sticky;
+    top: var(--space-xl);
+}
+.paragraf {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 2rem;
 }
 </style>
 
