@@ -32,16 +32,17 @@ h3 {
     overflow: hidden;
 }
 p {
-    font-size: var(--step-0);
+    font-size: var(--step-1);
     line-height: var(--space-m);
     margin-bottom: var(--space-m);
     text-wrap: balance;
 }
 .paragraph {
-    font-size: var(--step-3);
+    font-size: var(--step-1);
     line-height: var(--space-l);
     margin-bottom: var(--space-m);
-    // text-wrap: balance;
+     text-wrap: balance;
+     white-space: unset;
 }
 
 :global(body.dark-mode) .technologi p {
@@ -83,6 +84,13 @@ p {
 .primary-button {
     margin-top: var(--space-xl);
 }
+.styled-paragraph {
+    quotes: "“" "”";
+  font-style: italic; 
+  border-left: 1px solid #333; 
+  padding-left: 20px; 
+  margin: 50px 0;
+        }
 </style>
 
 <script>
@@ -168,6 +176,17 @@ onMount(() => {
         MySQL and Git (Version control) as well as WordPress. I’m also very skilled in using Adobe
         design programs, such as Photoshop, Illustrator, InDesign, Lightroom, Premiere Pro, After
         Effects and 3Ds max.
+    </p>
+
+
+
+    <p class="paragraph styled-paragraph wrap">
+        Correctly working at
+        <a href=" https://kglakademi.dk/" target="_blank">
+            <samp class="samp"> Green Car Lane</samp>
+        </a>
+       as a full-stack Developer, I drove the development of version 1 of the web application. 
+        My responsibilities included securing data flow, strengthening the backend and database, and collaborating on a SaaS marketplace, all while working with APIs and Data Science. My skill set encompasses MERN Stack, MongoDB, Git, Front-End Development, React.js, and Node.js.
     </p>
 
     <p class="paragraph wrap">
@@ -275,15 +294,7 @@ onMount(() => {
         called Facegarden, which is a browser game controlled with facial expressions. It is built for
         people who suffer from facial paralysis and would benefit from exercise of their facial muscles.
     </p>
-    <p class="paragraph wrap">
-        Now I am working at
-        <a href=" https://kglakademi.dk/" target="_blank">
-            <samp class="samp"> Green Car Lane</samp>
-        </a>
-        as a Frontend developer using Reactjs, NodeJS, Git and Mongodb  on a project
-        called Facegarden, which is a browser game controlled with facial expressions. It is built for
-        people who suffer from facial paralysis and would benefit from exercise of their facial muscles.
-    </p>
+  
 </article>
 
 <article class="card container m-top fadein">

@@ -227,7 +227,7 @@ img {
     color: #ffffff;
     background-color: rgb(111, 76, 238);
     border-radius: 50px;
-    padding: 14px 45px;
+    padding: 20px 46px;
     margin-top: 1.5rem;
     letter-spacing: 0.2rem;
     cursor: pointer;
@@ -238,32 +238,31 @@ img {
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0, 1);
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.03);
         transition: transform 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
     }
 }
 
-// .gradient {
-//     height: fit-content;
-//     z-index: -1;
-//     width: 100%;
-//     max-width: 1040px;
-//     background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
-//         radial-gradient(at 97% 1%, rgb(114, 133, 254) 0px, transparent 50%),
-//         radial-gradient(at 2% 19%, rgb(138, 107, 216) 0px, transparent 50%),
-//         radial-gradient(at 53% 99%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-//         // radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-//         radial-gradient(at 93% 90%, rgb(92, 62, 197) 0px, transparent 50%);
-//     // radial-gradient(at 79% 33%, rgb(244, 161, 94) 0px, transparent 50%);
-//     position: absolute;
-//     content: "";
-//     width: 100%;
-//     height: 100%;
-//     filter: blur(100px) saturate(150%);
-//     top: 80px;
-//     opacity: 0.65;
+.gradient {
+    height: fit-content;
+    z-index: -1;
+    width: 100%;
+    max-width: 1040px;
+    background-image: 
+    // radial-gradient(at 20% 50%, hsla(215, 98%, 53%, 1) 20px, transparent 55%),
+    radial-gradient(at 63% 40%, rgb(92, 62, 197) 30px, transparent 35%),
+                  radial-gradient(at 30% 60%, rgb(114, 133, 254) 140px, transparent 30%);
 
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-// }
+
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    filter: blur(100px) saturate(100%);
+    top: 80px;
+    opacity: 0.65;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

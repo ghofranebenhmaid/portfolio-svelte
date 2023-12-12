@@ -134,7 +134,7 @@ import SplitText from "../SplitText.svelte"
     <NavBar />
 
     <div class="header container ">
-        <div class="description wrap ">
+        <div class="description  ">
             <div class="flex  flex-ai-c-end"></div>
             <SplitText>
                 <h1 class="header__subtitle ">Frontend Developer & UI/UX Designer</h1>
@@ -150,7 +150,7 @@ import SplitText from "../SplitText.svelte"
                 <button class="primary-button "> Resume </button>
             </a>
         </div>
-        <div class="svg-circle wrap">
+        <div class="svg-circle ±±+?">
             <div class="arrow">
                 <ArrowSvg />
             </div>

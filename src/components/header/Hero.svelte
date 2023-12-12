@@ -31,10 +31,10 @@ p {
         // font-family: "Segoe UI";
         line-height: clamp(2.5rem, 1rem + 10vw, 10rem);
         font-family: "Black Han Sans", sans-serif;
-        // font-family: "Roboto Slab", serif;
-        // font-family: "Merriweather", serif;
+        /* font-family: "Roboto Slab", serif; */
+        /* font-family: "Merriweather", serif; */
         text-align: center;
-        font-weight: 900;
+        /* font-weight: 200; */
         @media (min-width: 315px) and (max-width: 1400px) and (orientation: landscape) {
             font-size: clamp(1.5rem, 1rem + 10vw, 3.5rem);
             line-height: var(--step-5);

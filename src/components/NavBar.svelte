@@ -36,6 +36,7 @@ import gsap from "gsap"
 
 import {onMount} from "svelte"
 import SplitText from "./SplitText.svelte"
+import SocialMediaAccounts from "./SocialMediaAccounts.svelte"
 
 onMount(() => {
     const tl = gsap.timeline()
@@ -101,6 +102,9 @@ function scrollTop() {
             <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
                 <a class="alink" href="/#/contact" on:click="{toggleMenu}"> Contact </a>
             </li>
+            <li class="{` ${isMenuOpen ? 'isopen slideUp' : ''} `}">
+                <SocialMediaAccounts/></li>
+           
         </ul>
     </div>
 </div>
